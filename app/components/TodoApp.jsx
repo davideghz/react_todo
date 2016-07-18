@@ -24,6 +24,11 @@ var TodoApp = React.createClass({
           id: uuid(),
           text: 'Chiamare la donna',
           completed: false
+        },
+        {
+          id: uuid(),
+          text: 'Chiamare la nonna',
+          completed: true
         }
       ]
     };
