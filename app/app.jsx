@@ -5,7 +5,6 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 // same as 'var Route = require('react-route').Route;' for all elements
 
 var TodoApp = require('TodoApp');
-
 var actions = require('actions');
 var store = require('configureStore').configure();
 var TodoAPI = require('TodoAPI');
