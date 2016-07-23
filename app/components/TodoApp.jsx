@@ -9,6 +9,11 @@ import TodoSearch from 'TodoSearch'
 
 var TodoApp = React.createClass({
   render: function() {
+
+      var a = {a: "a", b: "b"};
+      var b = {a: "aa", c: "cc"};
+      console.log({...a, ...b});
+
     return (
       <div>
         <h1 className="page-title">Todo App</h1>
