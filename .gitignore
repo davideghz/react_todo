@@ -3,3 +3,6 @@ node_modules
 
 # Bundle file
 public/bundle.js
+
+# Config and vars
+config/
