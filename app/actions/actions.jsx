@@ -69,8 +69,6 @@ export var startAddTodos = () => {
   };
 };
 
-
-
 export var updateTodo = (id, updates) => {
   return {
     type: 'UPDATE_TODO',
@@ -90,6 +88,24 @@ export var startToggleTodo = (id, completed) => {
 
     return todoRef.update(updates).then(()=>{
       dispatch(updateTodo(id, updates));
+    });
+  };
+};
+
+export var removeTodo = (id) => {
+  return {
+    type: 'REMOVE_TODO',
+    id
+  };
+};
+
+export var startRemoveTodo = (id) => {
+  return (dispatch, getState) => {
+    var uid = getState().auth.uid;
+    var todoRef = firebaseRef.child(`users/${uid}/todos/${id}`);
+
+    return todoRef.remove().then(()=>{
+      dispatch(removeTodo(id));
     });
   };
 };

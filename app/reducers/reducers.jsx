@@ -37,6 +37,10 @@ export var todosReducer = (state = [], action) => {
          return todo;
        }
       });
+    case 'REMOVE_TODO':
+      var newState = state;
+      newState.splice(action.id, 1);
+      return newState;
     case 'ADD_TODOS':
       return [
         ...state,
