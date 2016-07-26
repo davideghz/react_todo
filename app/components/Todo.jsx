@@ -30,7 +30,7 @@ export var Todo = React.createClass({
         <div>
           <p>{text}</p>
           <p className="todo__subtext">{renderDate()}</p>
-          <p onClick={() => {
+          <p className="cancel-todo-text" onClick={() => {
               dispatch(actions.startRemoveTodo(id));
             }}>Delete Todo</p>
         </div>
